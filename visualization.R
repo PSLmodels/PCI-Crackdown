@@ -176,3 +176,22 @@ plot_hk19_w_events = figure_hk(tam, hk19,
                              tail_len=Inf, color_choice = "red",
                              as.Date("2019-06-09"), current, with_events=TRUE)
 ggsave(file.path("Results/figures","fig_hk19_w_events.png"), plot = plot_hk19_w_events, width=(3/2)*hh, height=hh)
+
+
+
+tmp_tam = tam %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
+tmp_hk19 = hk19 %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
+tmp_hk14 = hk14 %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
+
+loess_model = loess(formula = days_since~predict, data=tmp_tam)
+
+predict_tiananmen_date(loess_model, tmp_hk19) %>% 
+	select(date_actual, date_tiananmen) %>% 
+	write_csv(path= "results/data/hk19.csv")
+
+predict_tiananmen_date(loess_model, tmp_hk14) %>% 
+	select(date_actual, date_tiananmen) %>% 
+	write_csv(path= "results/data/hk14.csv")
+
+
+

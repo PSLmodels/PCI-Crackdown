@@ -8,7 +8,7 @@ proc_data = function(df, max_sentences=20, max_articles=3){
         summarize(predict=avg_max(predict, max_sentences)) %>% 
         group_by(days_since, date) %>% 
         summarize(predict=avg_max(predict, max_articles)) %>% 
-        arrange(days_since)
+        arrange(days_since) %>% ungroup()
 }
 
 predict_tiananmen_date = function(model, df){
