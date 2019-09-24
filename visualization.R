@@ -187,11 +187,11 @@ loess_model = loess(formula = days_since~predict, data=tmp_tam)
 
 predict_tiananmen_date(loess_model, tmp_hk19) %>% 
 	select(date_actual, date_tiananmen) %>% 
-	write_csv(path= "results/data/hk19.csv")
+	write_csv(path= "results/data/PCI-Crackdown-2019.csv")
 
 predict_tiananmen_date(loess_model, tmp_hk14) %>% 
 	select(date_actual, date_tiananmen) %>% 
-	write_csv(path= "results/data/hk14.csv")
+	write_csv(path= "results/data/PCI-Crackdown-2014.csv")
 
 
 
