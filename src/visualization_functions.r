@@ -96,7 +96,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-04"),
                       label=" 1st troops sighting near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-16"), y=as.Date("1989-05-06"),
-                      label=" \"10 minutes\" warning from Chinese military", col="black", size=3, family = "sans", hjust=0) +
+                      label=" \"10 min\" warning from Chinese military", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-08"),
                       label=" Garrison troops rotastion", col="black", size=3, family = "sans", hjust=0) +
 

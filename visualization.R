@@ -18,7 +18,7 @@ source("src/visualization_functions.r")
 
 ## Setting and default value
 extrafont::loadfonts(device="win")
-current = as.Date("2019-09-23")
+current = as.Date("2019-09-24")
 hh = 4.5
 
 
@@ -174,5 +174,5 @@ plot_hk19_w_events = figure_hk(tam, hk19,
                              max_sentences=selected_model$max_sentences,
                              max_articles=selected_model$max_articles,
                              tail_len=Inf, color_choice = "red",
-                             as.Date("2019-07-01"), current, with_events=TRUE)
+                             as.Date("2019-06-09"), current, with_events=TRUE)
 ggsave(file.path("Results/figures","fig_hk19_w_events.png"), plot = plot_hk19_w_events, width=(3/2)*hh, height=hh)
