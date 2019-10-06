@@ -132,7 +132,7 @@ def compile_results(data_path, model, include_text, output):
 
     df = data['df']
     df['predict'] = tamhk.model.predict(pad_sequences(data['x'], maxlen=tamhk.pars.varirate['lstm1_max_len'], padding='post', truncating='post'))
-    if ~include_text:
+    if include_text==0:
         df = df.drop(columns =['sentence', 'sentence_seg'])
     df.to_excel(output)
 
