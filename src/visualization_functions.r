@@ -23,8 +23,8 @@ figure_tam = function(tam, max_sentences=20, max_articles=3){
         proc_data(max_sentences=max_sentences,max_articles=max_articles) %>% 
         ggplot(aes(x=predict, y=days_since)) +
         geom_point() +
-        scale_x_continuous(limits=c(0, 40), breaks = seq(0,40,by=10)) +
-        scale_y_continuous(limits=c(0, 40), breaks = seq(0,40,by=10)) +
+        scale_x_continuous(limits=c(-0, 43), breaks = seq(0,40,by=10)) +
+        scale_y_continuous(limits=c(-0, 43), breaks = seq(0,40,by=10)) +
         xlab("Fitted time of publication (days since beginning)") +
         ylab("Time of publication (days since beginning)") +
         theme_bw()+
