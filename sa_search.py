@@ -1,10 +1,10 @@
 import os
 from src.pci_crackdown import * 
 
-with open('data/output/training_data_tam.pkl' , 'rb') as f:
+with open('data/output/training_data_tam_19890427.pkl' , 'rb') as f:
     df_train = pickle.load(f)
 
-with open('data/output/testing_data_tam.pkl' , 'rb') as f:
+with open('data/output/testing_data_tam_19890427.pkl' , 'rb') as f:
     df_test = pickle.load(f)
 
 
@@ -25,7 +25,7 @@ if sa is not None:
     print('*************')
     print('better model!')
     print('*************')
-    sa.save('model/best')
+    sa.save('Results/models/best')
 
     print(tamhk.loss)
     print(sa.loss)

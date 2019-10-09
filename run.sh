@@ -3,7 +3,7 @@
 python clean_data.py
 
 # Step 2: Train model
-for i in `seq 1 100` 
+for i in `seq 1 10000` 
 do
     python sa_search.py
 done

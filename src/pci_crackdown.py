@@ -64,7 +64,7 @@ def get_fixed(root = "./"):
                 'train' : 'data/output/training_data.pkl', 
                 'test' : 'data/output/testing_data.pkl', 
                 'predict' : 'data/output/prediction_data_HK2019.pkl', 
-                'model_folder' : 'model/',
+                'model_folder' : 'Results/models/',
                 'mod_id' : str(round((time())))
             }    
     return fixed
@@ -170,7 +170,7 @@ class pci_crackdown():
         print(best)
 
         if best < self.loss:
-            g=open("model/best.txt", "a+")
+            g=open("Results/models/best.txt", "a+")
             g.write(str(best)+"\n")
             g.close()
             if best == base.loss:

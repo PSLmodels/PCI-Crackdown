@@ -19,6 +19,7 @@ source("src/visualization_functions.r")
 ## Setting and default value
 extrafont::loadfonts(device="win")
 current = as.Date("2019-10-09")
+version = "0.2.0"
 hh = 4.5
 
 
@@ -187,11 +188,10 @@ loess_model = loess(formula = days_since~predict, data=tmp_tam)
 
 predict_tiananmen_date(loess_model, tmp_hk19) %>% 
 	select(date_actual, date_tiananmen) %>% 
-	write_csv(path= paste0("results/data/PCI-Crackdown-HK2019_v0.1.0_",as.character(current),".csv"))
+	write_csv(path= paste0("results/data/PCI-Crackdown-HK2019_v",version,"_",as.character(current),".csv"))
 
 predict_tiananmen_date(loess_model, tmp_hk14) %>% 
 	select(date_actual, date_tiananmen) %>% 
-	write_csv(path= paste0("results/data/PCI-Crackdown-HK2014_v0.1.0_",as.character(current),".csv"))
-
+	write_csv(path= paste0("results/data/PCI-Crackdown-HK2014_v",version,"_",as.character(current),".csv"))
 
 
