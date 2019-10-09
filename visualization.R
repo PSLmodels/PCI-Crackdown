@@ -18,7 +18,7 @@ source("src/visualization_functions.r")
 
 ## Setting and default value
 extrafont::loadfonts(device="win")
-current = as.Date("2019-10-08")
+current = as.Date("2019-10-09")
 hh = 4.5
 
 
