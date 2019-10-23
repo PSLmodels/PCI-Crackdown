@@ -91,14 +91,25 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2019-08-10"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-08-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-08-29"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2019-10-04"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2019-10-12"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2019-10-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-02"),
-                      label=" 1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
+                      label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-04"),
-                      label=" 1st troops sighting near HK border", col="black", size=3, family = "sans", hjust=0) +
+                      label="1st troops sighting near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-16"), y=as.Date("1989-05-06"),
-                      label=" \"10 min\" warning from Chinese military", col="black", size=3, family = "sans", hjust=0) +
+                      label="\"10 min\" warning from Chinese military", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-08"),
-                      label=" Garrison troops rotastion", col="black", size=3, family = "sans", hjust=0) +
+                      label="Garrison troops rotastion", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-04-30"),
+                      label="Anti-mask law", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-04"),
+                      label="Phase-one", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-02"),
+                      label="trade deal", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-06"),
+                      label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
 
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
             theme_bw()+
