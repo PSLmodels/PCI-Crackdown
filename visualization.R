@@ -18,7 +18,7 @@ source("src/visualization_functions.r")
 
 ## Setting and default value
 extrafont::loadfonts(device="win")
-current = as.Date("2019-11-05")
+current = as.Date("2019-11-06")
 version = "0.2.0"
 hh = 4.5
 
@@ -79,7 +79,7 @@ timeline = df_sum %>%
 
 plot1 = ggplot(timeline, aes(x = days_since, y = n_articles, group = event, colour = event)) +
     geom_line(aes(linetype = event)) +
-    scale_x_continuous(limits=c(0, 150), breaks = seq(0,150,by=30)) +
+    scale_x_continuous(limits=c(0, 180), breaks = seq(0,180,by=30)) +
     scale_y_continuous(limits=c(0, 12), breaks = seq(0,12,by=4)) +
     xlab("Number of days since beginning") +
     ylab("Number of relevant articles") +
@@ -94,7 +94,7 @@ ggsave(file.path("Results/figures","summary_stats_1.png"), plot = plot1, width=(
 
 plot2 = ggplot(timeline, aes(x = days_since, y = n_fronts, group = event, colour = event)) +
     geom_line(aes(linetype = event)) +
-    scale_x_continuous(limits=c(0, 150), breaks = seq(0,150,by=30)) +
+    scale_x_continuous(limits=c(0, 180), breaks = seq(0,180,by=30)) +
     scale_y_continuous(limits=c(0, 12), breaks = seq(0,12,by=4)) +
     xlab("Number of days since beginning") +
     ylab("Number of relevant front-page articles") +
