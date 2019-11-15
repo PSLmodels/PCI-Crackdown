@@ -102,12 +102,12 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                       label="\"10 min\" warning from Chinese military", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-08"),
                       label="Garrison troops rotastion", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-04-28"),
+            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-04-30"),
                       label="Anti-mask law", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-02"),
-                      label="Phase-one", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-04-30"),
-                      label="trade deal", col="black", size=3, family = "sans", hjust=0) +
+                      label="Phase-one trade deal", col="black", size=3, family = "sans", hjust=0) +
+            # geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-04-30"),
+            #           label="trade deal", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-04"),
                       label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
 
