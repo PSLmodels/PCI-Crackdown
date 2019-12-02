@@ -48,16 +48,16 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             ggplot(aes(x=date_actual, y=date_tiananmen)) +
             geom_point(color = color_choice) +
             geom_line(color = color_choice) +
-            scale_x_date(limits = c(hk_first_date,hk_last_date),
+            scale_x_date(limits = c(hk_first_date,hk_last_date+2),
                          breaks = c(hk_first_date,
-                                    seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/6)),
+                                    seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/5)),
                                     hk_last_date)) +
             scale_y_date(limits =c (as.Date("1989-04-25"), as.Date("1989-06-04")+3),
                          breaks = c(as.Date("1989-04-25"),
                                     seq.Date(as.Date("1989-04-25"), as.Date("1989-06-04"), by="7 days"),
                                     as.Date("1989-06-04"))) +
             geom_hline(yintercept=as.Date("1989-06-04"), linetype = "dashed", col="black", size = 1 ) +
-            geom_text(x=hk_first_date+ceiling((hk_last_date-hk_first_date)/2), y=as.Date("1989-06-04")+2,
+            geom_text(x=hk_first_date+ceiling((hk_last_date-hk_first_date)/2+2), y=as.Date("1989-06-04")+2,
                       label="June 4 crackdown", col="black", size=4, family = "sans") +
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
             theme_bw()+
@@ -75,7 +75,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             ggplot(aes(x=date_actual, y=date_tiananmen)) +
             geom_point(color = color_choice) +
             geom_line(color = color_choice) +
-            scale_x_date(limits = c(hk_first_date,hk_last_date),
+            scale_x_date(limits = c(hk_first_date,hk_last_date+2),
                          breaks = c(hk_first_date,
                                     seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/6)),
                                     hk_last_date)) +
@@ -84,7 +84,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                                     seq.Date(as.Date("1989-04-25"), as.Date("1989-06-04"), by="7 days"),
                                     as.Date("1989-06-04"))) +
             geom_hline(yintercept=as.Date("1989-06-04"), linetype = "dashed", col="black", size = 1 ) +
-            geom_text(x=hk_first_date+ceiling((hk_last_date-hk_first_date)/2), y=as.Date("1989-06-04")+2,
+            geom_text(x=hk_first_date+ceiling((hk_last_date-hk_first_date)/2+2), y=as.Date("1989-06-04")+2,
                       label="June 4 crackdown", col="black", size=4, family = "sans") +
 
             geom_vline(xintercept=as.Date("2019-08-05"), linetype = "longdash", col="grey", size = 0.5 ) +
@@ -93,23 +93,35 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2019-08-29"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-10-04"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-10-12"), linetype = "longdash", col="grey", size = 0.5 ) +
-            geom_vline(xintercept=as.Date("2019-10-16"), linetype = "longdash", col="grey", size = 0.5 ) +
-            geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-02"),
+            geom_vline(xintercept=as.Date("2019-11-16"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2019-11-28"), linetype = "longdash", col="grey", size = 0.5 ) +
+            # geom_vline(xintercept=as.Date("2019-10-16"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-01"),
                       label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-04"),
+            geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-03"),
                       label="1st troops sighting near HK border", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-08-16"), y=as.Date("1989-05-06"),
-                      label="\"10 min\" warning from Chinese military", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-08"),
-                      label="Garrison troops rotastion", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-04-30"),
+            geom_text(x=as.Date("2019-08-16"), y=as.Date("1989-05-05"),
+                      label="\"10 min\" warning from military", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-07"),
+                      label="Garrison rotastion", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-05-31"),
                       label="Anti-mask law", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-02"),
-                      label="Phase-one trade deal", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-28"),
+                      label="Phase-one trade", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-26"),
+                      label="deal announced", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-04"),
+                      label="PLA soldiers", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-02"),
+                      label="on street", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-09"),
+                      label="US bills", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-07"),
+                      label="on HK", col="black", size=3, family = "sans", hjust=0) +
             # geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-04-30"),
             #           label="trade deal", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-04"),
-                      label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
+            # geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-04"),
+            #           label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
 
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
             theme_bw()+
