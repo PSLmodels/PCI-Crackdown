@@ -93,9 +93,9 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2019-08-29"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-10-04"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-10-12"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2019-10-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-11-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-11-28"), linetype = "longdash", col="grey", size = 0.5 ) +
-            # geom_vline(xintercept=as.Date("2019-10-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-01"),
                       label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-03"),
@@ -104,12 +104,16 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                       label="\"10 min\" warning from military", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-07"),
                       label="Garrison rotastion", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-05-31"),
+            geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-06-02"),
                       label="Anti-mask law", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-28"),
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-30"),
                       label="Phase-one trade", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-26"),
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-28"),
                       label="deal announced", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-25"),
+                      label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-23"),
+                      label="(House)", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-04"),
                       label="PLA soldiers", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-02"),
