@@ -84,7 +84,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                                     seq.Date(as.Date("1989-04-25"), as.Date("1989-06-04"), by="7 days"),
                                     as.Date("1989-06-04"))) +
             geom_hline(yintercept=as.Date("1989-06-04"), linetype = "dashed", col="black", size = 1 ) +
-            geom_text(x=hk_first_date+ceiling((hk_last_date-hk_first_date)/2+2), y=as.Date("1989-06-04")+2,
+            geom_text(x=hk_first_date+ceiling((hk_last_date-hk_first_date)/2+1), y=as.Date("1989-06-04")+2,
                       label="June 4 crackdown", col="black", size=4, family = "sans") +
 
             geom_vline(xintercept=as.Date("2019-08-05"), linetype = "longdash", col="grey", size = 0.5 ) +
@@ -114,13 +114,13 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                       label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-23"),
                       label="(House)", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-04"),
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-04-30"),
                       label="PLA soldiers", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-02"),
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-04-28"),
                       label="on street", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-09"),
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-05"),
                       label="US bills", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-07"),
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-03"),
                       label="on HK", col="black", size=3, family = "sans", hjust=0) +
             # geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-04-30"),
             #           label="trade deal", col="black", size=3, family = "sans", hjust=0) +
