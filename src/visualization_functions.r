@@ -96,6 +96,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2019-10-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-11-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-11-28"), linetype = "longdash", col="grey", size = 0.5 ) +
+            # geom_vline(xintercept=as.Date("2019-12-14"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-01"),
                       label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-03"),
@@ -106,22 +107,16 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                       label="Garrison rotastion", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-06-02"),
                       label="Anti-mask law", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-30"),
-                      label="Phase-one trade", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-28"),
-                      label="deal announced", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-25"),
-                      label="HKHRDA", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-23"),
-                      label="(House)", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-04-30"),
-                      label="PLA soldiers", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-04-28"),
-                      label="on street", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-05"),
-                      label="US bills", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-31"),
+                      label="Phase-one trade deal announced", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-29"),
+                      label="HKHRDA (House)", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-01"),
+                      label="PLA soldiers on street", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-03"),
-                      label="on HK", col="black", size=3, family = "sans", hjust=0) +
+                      label="US bills on HK", col="black", size=3, family = "sans", hjust=0) +
+            # geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-05"),
+            #           label="Phase-one trade deal reached", col="black", size=3, family = "sans", hjust=0) +
             # geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-04-30"),
             #           label="trade deal", col="black", size=3, family = "sans", hjust=0) +
             # geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-04"),
