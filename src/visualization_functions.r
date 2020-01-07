@@ -116,9 +116,9 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-04-30"),
                       label="US bills on HK", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-05"),
-                      label="Phase-one", col="black", size=3, family = "sans", hjust=0) +
+                      label="Phase-one trade", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-03"),
-                      label="trade deal", col="black", size=3, family = "sans", hjust=0) +
+                      label="deal reached", col="black", size=3, family = "sans", hjust=0) +
             # geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-04-30"),
             #           label="trade deal", col="black", size=3, family = "sans", hjust=0) +
             # geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-04"),
