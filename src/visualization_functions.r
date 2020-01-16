@@ -48,7 +48,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             ggplot(aes(x=date_actual, y=date_tiananmen)) +
             geom_point(color = color_choice) +
             geom_line(color = color_choice) +
-            scale_x_date(limits = c(hk_first_date,hk_last_date+2),
+            scale_x_date(limits = c(hk_first_date,hk_last_date+3),
                          breaks = c(hk_first_date,
                                     seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/5)),
                                     hk_last_date)) +
@@ -75,7 +75,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             ggplot(aes(x=date_actual, y=date_tiananmen)) +
             geom_point(color = color_choice) +
             geom_line(color = color_choice) +
-            scale_x_date(limits = c(hk_first_date,hk_last_date+2),
+            scale_x_date(limits = c(hk_first_date,hk_last_date+3),
                          breaks = c(hk_first_date,
                                     seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/6)),
                                     hk_last_date)) +
@@ -104,17 +104,25 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_text(x=as.Date("2019-08-16"), y=as.Date("1989-05-05"),
                       label="\"10 min\" warning from military", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-29"), y=as.Date("1989-05-07"),
-                      label="Garrison rotastion", col="black", size=3, family = "sans", hjust=0) +
+                      label="Garrison rotation", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-04"), y=as.Date("1989-06-02"),
                       label="Anti-mask law", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-12"), y=as.Date("1989-05-31"),
-                      label="Phase-one trade deal announced", col="black", size=3, family = "sans", hjust=0) +
+                      label="Phase 1 trade deal announced", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-29"),
-                      label="HKHRDA (House)", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-04-28"),
-                      label="PLA soldiers on street", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-04-30"),
-                      label="US bills on HK", col="black", size=3, family = "sans", hjust=0) +
+                      label="HK Human Rights & Dem. Act", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-10-16"), y=as.Date("1989-05-27"),
+                      label="passed US House", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-05-02"),
+                      label="PLA soldiers", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-16"), y=as.Date("1989-04-30"),
+                      label="on street", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-08"),
+                      label="HK Act", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-06"),
+                      label="became", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2019-11-28"), y=as.Date("1989-05-04"),
+                      label="US law", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-05"),
                       label="Phase-one trade", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-03"),
