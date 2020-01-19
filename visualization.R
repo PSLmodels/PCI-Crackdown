@@ -35,21 +35,24 @@ tam =
     mutate(date = as.Date(date),
            begin = as.Date("1989-04-25"),
            end = as.Date("1989-06-04"),
-           event = "1989 Tiananman") %>% 
+           event = "1989 Tiananman") %>%
+    filter(date >= begin, date <=end) %>%
     select(-...1)
 hk14 =
     read_excel("Results/data/predict_df_HK2014.xlsx") %>%
     mutate(date = as.Date(date),
            begin = as.Date("2014-09-26"),
            end = as.Date("2014-12-15"),
-           event = "2014 Hong Kong") %>%
+           event = "2014 Hong Kong") %>% 
+    filter(date >= begin, date <=end) %>%
     select(-...1)
 hk19 =
     read_excel("Results/data/predict_df_HK2019.xlsx") %>%
     mutate(date = as.Date(date),
            begin = as.Date("2019-06-09"),
            end = current,
-           event = "2019 Hong Kong") %>%
+           event = "2019 Hong Kong") %>% 
+    filter(date >= begin, date <=end) %>%
     select(-...1)
 
 
