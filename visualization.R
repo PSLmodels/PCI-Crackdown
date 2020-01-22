@@ -35,7 +35,7 @@ tam =
     mutate(date = as.Date(date),
            begin = as.Date("1989-04-25"),
            end = as.Date("1989-06-04"),
-           event = "1989 Tiananman") %>% 
+           event = "1989 Tiananmen") %>% 
     filter(date >= begin, date <=end) %>%
     select(-...1)
 hk14 =
