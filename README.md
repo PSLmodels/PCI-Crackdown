@@ -15,7 +15,7 @@ The PCI-Crackdown is built on an inevitable relationship between state propagand
 
 For details about the methodology and findings of this project, please see the following research paper:
 
-- Chan, Julian TszKin and Weifeng Zhong. 2020. "Predicting Authoritarian Crackdowns: A Machine Learning Approach"  [Mercatus Working Paper](https://www.mercatus.org/publications/technology-and-innovation/predicting-authoritarian-crackdowns) (latest version available [here](https://policychangeindex.org/Authoritarian_Crackdowns.pdf)).
+- Chan, Julian TszKin and Weifeng Zhong. 2020. "Predicting Authoritarian Crackdowns: A Machine Learning Approach"  [Mercatus Working Paper](https://www.mercatus.org/publications/technology-and-innovation/predicting-authoritarian-crackdowns) (latest version available [here](https://policychangeindex.org/pdf/Authoritarian_Crackdowns.pdf)).
 
 
 Disclaimer
@@ -41,4 +41,4 @@ Please cite the source of the latest Policy Change Index for Crackdown (PCI-Crac
 
 For academic work, please cite the following research paper:
 
-- Chan, Julian TszKin and Weifeng Zhong. 2019. "Predicting Authoritarian Crackdowns: A Machine Learning Approach"  [Mercatus Working Paper](https://www.mercatus.org/publications/technology-and-innovation/predicting-authoritarian-crackdowns) (latest version available [here](https://policychangeindex.org/Authoritarian_Crackdowns.pdf)).
+- Chan, Julian TszKin and Weifeng Zhong. 2019. "Predicting Authoritarian Crackdowns: A Machine Learning Approach"  [Mercatus Working Paper](https://www.mercatus.org/publications/technology-and-innovation/predicting-authoritarian-crackdowns) (latest version available [here](https://policychangeindex.org/pdf/Authoritarian_Crackdowns.pdf)).
