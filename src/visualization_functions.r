@@ -50,7 +50,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_line(color = color_choice) +
             scale_x_date(limits = c(hk_first_date,hk_last_date+3),
                          breaks = c(hk_first_date,
-                                    seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/5)),
+                                    seq.Date(hk_first_date, hk_last_date, by=ceiling((hk_last_date-hk_first_date)/6)),
                                     hk_last_date)) +
             scale_y_date(limits =c (as.Date("1989-04-25"), as.Date("1989-06-04")+3),
                          breaks = c(as.Date("1989-04-25"),
