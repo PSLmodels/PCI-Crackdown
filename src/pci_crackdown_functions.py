@@ -2,7 +2,7 @@ import pandas as pd
 from keras.preprocessing.text import text_to_word_sequence
 from keras.preprocessing.text import Tokenizer
 import math
-import jieba
+import jieba_fast as jieba
 import numpy as np
 import pickle
 import sklearn 

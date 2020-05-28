@@ -18,8 +18,11 @@ source("src/visualization_functions.r")
 
 ## Setting and default value
 extrafont::loadfonts(device="win")
-current = as.Date("2020-01-07")
-version = "0.2.0"
+wave1_end = as.Date("2020-01-07")
+wave2_begin = as.Date("2020-04-01")
+wave2_end = as.Date("2020-05-28")
+wave2_max = as.Date("2020-08-01")
+version = "0.3.0"
 hh = 4.5
 
 
@@ -50,7 +53,15 @@ hk19 =
     read_excel("Results/data/predict_df_HK2019.xlsx") %>%
     mutate(date = as.Date(date),
            begin = as.Date("2019-06-09"),
-           end = current,
+           end = wave1_end,
+           event = "2019 Hong Kong") %>% 
+    filter(date >= begin, date <=end) %>%
+    select(-...1)
+hk19_w2 =
+    read_excel("Results/data/predict_df_HK2019.xlsx") %>%
+    mutate(date = as.Date(date),
+           begin = wave2_begin,
+           end = wave2_end,
            event = "2019 Hong Kong") %>% 
     filter(date >= begin, date <=end) %>%
     select(-...1)
@@ -162,8 +173,16 @@ plot_hk19 = figure_hk(tam, hk19,
                       max_sentences=selected_model$max_sentences,
                       max_articles=selected_model$max_articles,
                       tail_len=Inf, color_choice = "red",
-                      as.Date("2019-06-09"), current, with_events=FALSE)
+                      as.Date("2019-06-09"), wave1_end, with_events=FALSE)
 ggsave(file.path("Results/figures","fig_hk19.png"), plot = plot_hk19, width=(3/2)*hh, height=hh)
+
+
+plot_hk19_w2 = figure_hk(tam, hk19_w2,
+                      max_sentences=selected_model$max_sentences,
+                      max_articles=selected_model$max_articles,
+                      tail_len=Inf, color_choice = "red",
+                      wave2_begin, max(wave2_end,wave2_max), with_events=FALSE)
+ggsave(file.path("Results/figures","fig_hk19_w2.png"), plot = plot_hk19_w2, width=(3/2)*hh, height=hh)
 
 
 plot_hk14 = figure_hk(tam, hk14,
@@ -178,23 +197,30 @@ plot_hk19_w_events = figure_hk(tam, hk19,
                              max_sentences=selected_model$max_sentences,
                              max_articles=selected_model$max_articles,
                              tail_len=Inf, color_choice = "red",
-                             as.Date("2019-06-09"), current, with_events=TRUE)
+                             as.Date("2019-06-09"), wave1_end, with_events=TRUE)
 ggsave(file.path("Results/figures","fig_hk19_w_events.png"), plot = plot_hk19_w_events, width=(3/2)*hh, height=hh)
+
+
+plot_hk19_w2_w_events = figure_hk(tam, hk19_w2,
+                             max_sentences=selected_model$max_sentences,
+                             max_articles=selected_model$max_articles,
+                             tail_len=Inf, color_choice = "red",
+                             wave2_begin, max(wave2_end,wave2_max), with_events=TRUE)
+ggsave(file.path("Results/figures","fig_hk19_w2_w_events.png"), plot = plot_hk19_w2_w_events, width=(3/2)*hh, height=hh)
 
 
 
 tmp_tam = tam %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
-tmp_hk19 = hk19 %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
+tmp_hk19 = rbind(hk19, hk19_w2) %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
+# tmp_hk19_w2 = hk19_w2 %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
 tmp_hk14 = hk14 %>% proc_data(max_sentences=selected_model$max_sentences,max_articles=selected_model$max_articles) 
 
 loess_model = loess(formula = days_since~predict, data=tmp_tam)
 
 predict_tiananmen_date(loess_model, tmp_hk19) %>% 
 	select(date_actual, date_tiananmen) %>% 
-	write_csv(path= paste0("results/data/PCI-Crackdown-HK2019_v",version,"_",as.character(current),".csv"))
+	write_csv(path= paste0("results/data/PCI-Crackdown-HK2019_v",version,"_",as.character(wave2_end),".csv"))
 
 predict_tiananmen_date(loess_model, tmp_hk14) %>% 
 	select(date_actual, date_tiananmen) %>% 
-	write_csv(path= paste0("results/data/PCI-Crackdown-HK2014_v",version,"_",as.character(current),".csv"))
-
-
+	write_csv(path= paste0("results/data/PCI-Crackdown-HK2014_v",version,"_",as.character(wave2_end),".csv"))

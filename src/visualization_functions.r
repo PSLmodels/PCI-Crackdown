@@ -97,6 +97,8 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2019-11-16"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-11-28"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2019-12-14"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2020-05-21"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2020-05-24"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-01"),
                       label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-03"),
@@ -121,6 +123,10 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                       label="Phase 1 trade", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-02"),
                       label="deal reached", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2020-05-21"), y=as.Date("1989-05-23"),
+                      label="National security law announced", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2020-05-24"), y=as.Date("1989-05-25"),
+                      label="1st post-pandemic protest", col="black", size=3, family = "sans", hjust=0) +
 
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
             theme_bw()+
