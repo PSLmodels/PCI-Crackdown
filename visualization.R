@@ -20,7 +20,7 @@ source("src/visualization_functions.r")
 extrafont::loadfonts(device="win")
 wave1_end = as.Date("2020-01-07")
 wave2_begin = as.Date("2020-04-01")
-wave2_end = as.Date("2020-06-03")
+wave2_end = as.Date("2020-06-04")
 wave2_max = as.Date("2020-08-01")
 version = "0.3.0"
 hh = 4.5
