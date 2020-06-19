@@ -125,13 +125,13 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
                       label="Phase 1 trade", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-02"),
                       label="deal reached", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2020-05-21"), y=as.Date("1989-05-04"),
+            geom_text(x=as.Date("2020-05-21"), y=as.Date("1989-05-02"),
                       label="National security law proposed", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2020-05-24"), y=as.Date("1989-05-06"),
+            geom_text(x=as.Date("2020-05-24"), y=as.Date("1989-05-04"),
                       label="1st post-pandemic protest", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2020-05-28"), y=as.Date("1989-05-08"),
+            geom_text(x=as.Date("2020-05-28"), y=as.Date("1989-05-06"),
                       label="National security law approved in Beijing", col="black", size=3, family = "sans", hjust=0) +
-            geom_text(x=as.Date("2020-06-04"), y=as.Date("1989-05-10"),
+            geom_text(x=as.Date("2020-06-04"), y=as.Date("1989-05-08"),
                       label="Tiananmen vigil in HK", col="black", size=3, family = "sans", hjust=0) +
 
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
