@@ -101,6 +101,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2020-05-24"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2020-05-28"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2020-06-04"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2020-06-30"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-01"),
                       label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-03"),
@@ -126,13 +127,15 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_text(x=as.Date("2019-12-14"), y=as.Date("1989-05-02"),
                       label="deal reached", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2020-05-21"), y=as.Date("1989-05-02"),
-                      label="National security law proposed", col="black", size=3, family = "sans", hjust=0) +
+                      label="National security bill proposed", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2020-05-24"), y=as.Date("1989-05-04"),
                       label="1st post-pandemic protest", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2020-05-28"), y=as.Date("1989-05-06"),
-                      label="National security law approved in Beijing", col="black", size=3, family = "sans", hjust=0) +
+                      label="Nat'l security bill approved in Beijing", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2020-06-04"), y=as.Date("1989-05-08"),
                       label="Tiananmen vigil in HK", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2020-06-30"), y=as.Date("1989-05-24"),
+                      label="Nat'l security bill became law", col="black", size=3, family = "sans", hjust=0) +
 
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
             theme_bw()+
