@@ -102,6 +102,7 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_vline(xintercept=as.Date("2020-05-28"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2020-06-04"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_vline(xintercept=as.Date("2020-06-30"), linetype = "longdash", col="grey", size = 0.5 ) +
+            geom_vline(xintercept=as.Date("2020-07-14"), linetype = "longdash", col="grey", size = 0.5 ) +
             geom_text(x=as.Date("2019-08-05"), y=as.Date("1989-05-01"),
                       label="1st anti-riot drill near HK border", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2019-08-10"), y=as.Date("1989-05-03"),
@@ -135,7 +136,11 @@ figure_hk = function(tam, hk, max_sentences=20, max_articles=3,
             geom_text(x=as.Date("2020-06-04"), y=as.Date("1989-05-08"),
                       label="Tiananmen vigil in HK", col="black", size=3, family = "sans", hjust=0) +
             geom_text(x=as.Date("2020-06-30"), y=as.Date("1989-05-24"),
-                      label="Nat'l security bill became law", col="black", size=3, family = "sans", hjust=0) +
+                      label="Nat'l security bill became HK law", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2020-07-14"), y=as.Date("1989-05-22"),
+                      label="HK Autonomy Act", col="black", size=3, family = "sans", hjust=0) +
+            geom_text(x=as.Date("2020-07-14"), y=as.Date("1989-05-20"),
+                      label="became US law", col="black", size=3, family = "sans", hjust=0) +
 
             ylab("Counterfactual timeline (Tiananmen)") + xlab("Actual timeline (Hong Kong)") +
             theme_bw()+
